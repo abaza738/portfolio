@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+@import '_variables.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: $background;
+  color: $primary;
+}
+
+a {
+  color: rgb(0, 191, 255);
+  text-decoration: none;
+  transition: 200ms;
+
+  &:hover {
+    color: rgb(135, 225, 255);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.terminal-sign {
+  color: $secondary;
+}
+
+.cursor {
+  animation: pulse 750ms steps(2) infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
