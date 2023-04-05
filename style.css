@@ -1,0 +1,17 @@
+:root {
+    --background: #152025;
+    --text: #f0f5ff;
+}
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Exo';
+    font-weight: 200;
+    background-color: var(--background);
+    color: var(--text);
+    transition: 300ms;
+}
