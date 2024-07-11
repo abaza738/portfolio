@@ -12,7 +12,8 @@ const textArray = [
   "front-end",
   "Angular",
   "VueJS",
-  "React",
+  "Nuxt",
+  "Tauri"
 ];
 const typingDelay = 100;
 const erasingDelay = 50;
