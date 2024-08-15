@@ -7,13 +7,13 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Maher Abaza Portfolio">
-    <meta property="og:description" content="Portfolio website for Maher Abaza.">
+    <meta property="og:description" content="My portfolio.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./img/abaza738-512.png">
+    <meta property="og:image" content="/img/abaza738-512.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="50">
     <meta property="og:image:height" content="50">
-    <meta name="theme-color" content="#152025">
+    <meta name="theme-color" content="#0b0c0f">
     <title>Maher Abaza</title>
 
     <link rel="shortcut icon" href="./img/abaza738-512.png" type="image/png">
@@ -21,124 +21,80 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="typing-style.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="bg-neutral-900">
-    <main class="flex flex-col">
-        <section class="header flex flex-col items-center py-16 gap-4 bg-sky-900">
-            <div class="overlay"></div>
-            <nav class="container max-[640px]:w-5/6 flex items-center justify-between">
-                <div class="empty"></div>
-                
-                <div class="nav-items flex items-center gap-8 text-[2rem]">
-                    <a href="https://github.com/abaza738" target="_blank" class="transition duration-300 text-decoration-none hover:text-sky-200">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/maher-abaza/" target="_blank" class="transition duration-300 text-decoration-none hover:text-sky-200">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </nav>
+<body>
+    <main class="flex flex-1 flex-col items-center px-4">
+        <nav class="responsive flex items-center justify-between py-4 border-b border-white/5">
+            <div class="flex items-center gap-8">
+                <h1 class="font-medium font-mono">abaza.dev</h1>
+            </div>
             
-            <div class="container max-[640px]:w-5/6 welcome flex flex-col gap-4">
-                <h1 class="flex items-center gap-4 text-[3rem] font-bold">
-                    Ahoy, I'm Maher 👋🏻
-                </h1>
-                <h2 class="text-[1.5rem] typing-container">
-                    <span class="text">I am a <span class="typed-text text-lime-400 font-bold"></span><span class="cursor"> </span> developer!</span>
-                </h2>
-                <div class="buttons flex font-[600] gap-4">
-                    <a href="mailto:maher.abaza@proton.me" class="rounded-xl border-4 border-transparent bg-blue-500 px-4 py-2 transition duration-300 text-decoration-none hover:bg-blue-500">Get in touch <i class="fa fa-envelope"></i></a>
-                    <a href="https://drive.google.com/file/d/1TajqGaPcLJ6FSes9d5baevQDB6mRaQti/view" target="_blank" class="rounded-xl border-4 border-blue-500 px-4 py-2 transition duration-300 text-decoration-none hover:border-blue-500">Resume <i class="fa fa-link"></i></a>
-                </div>
+            <div class="nav-items flex items-center gap-8 text-[1.5rem]">
+                <a href="https://poscon.net/" title="POSCON" target="_blank" class="transition duration-300 text-decoration-none text-white/50 hover:text-white/80">
+                    <img src="./img/poscon-logo.svg" alt="poscon-logo" class="h-[1.5rem]">
+                </a>
+
+                <a href="https://github.com/abaza738" title="GitHub" target="_blank" class="transition duration-300 text-decoration-none text-white/50 hover:text-white/80">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/maher-abaza/" title="LinkedIn" target="_blank" class="transition duration-300 text-decoration-none text-white/50 hover:text-white/80">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
+        </nav>
 
-        </section>
+        <section class="responsive flex flex-1 flex-col gap-8 py-8">
+            <div class="flex flex-col gap-4 my-auto">
+                <h1 class="text-4xl font-bold animate-slide-down">Maher Abaza</h1>
 
-        <section class="flex justify-center py-16">
-            <div class="container max-[640px]:w-5/6 flex justify-center flex-wrap gap-10 text-[3rem]">
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/python.png" alt="python" title="Python" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/js.png" alt="js" title="JavaScript" class="h-[3rem] rounded-md">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/ts.png" alt="ts" title="TypeScript" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/django.png" alt="django" title="Django" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/nodejs.png" alt="nodejs" title="NodeJS" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/nestjs.png" alt="nestjs" title="NestJS" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/tauri.svg" alt="tauri" title="Tauri" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/angular.png" alt="angular" title="Angular" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/vue.png" alt="vue" title="VueJS" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/nuxt.svg" alt="nuxt" title="Nuxt" class="h-[3rem]">
-                </div>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/sass.png" alt="sass" title="Sass" class="h-[3rem]">
-                </div>
-                <i class="fab fa-markdown" title="Markdown"></i>
-                <div class="icon inline-flex justify-center">
-                    <img src="./img/git.png" alt="git" title="Git" class="h-[3rem]">
-                </div>
+                <p class="text-lg">Hey, I'm Maher, a software engineer based in Jordan.</p>
+
+                <p class="text-lg"><span>Download my</span> <a href="https://drive.google.com/file/d/1TajqGaPcLJ6FSes9d5baevQDB6mRaQti/view" target="_blank" class="text-sm transition duration-300 text-decoration-none px-2 py-1 rounded-md bg-white/10 hover:bg-white/30 whitespace-nowrap"><i class="fa-solid fa-file-pdf"></i> resume</a><span>, or contact me via</span> <a href="mailto:maher.abaza@proton.me" class="text-sm transition duration-300 text-decoration-none px-2 py-1 rounded-md bg-white/10 hover:bg-white/30 whitespace-nowrap"><i class="fa-solid fa-at"></i> email</a><span>!</span></p>
             </div>
         </section>
 
-        <section class="flex flex-col items-center gap-8 py-8">
-            <h2 class="text-center font-bold text-[2rem]">Contributions</h2>
-
-            <div class="container max-[640px]:w-5/6 grid grid-cols-3 max-[640px]:grid-cols-2 max-[420px]:grid-cols-1 gap-4">
-                <div class="flex flex-col justify-between gap-4 p-4 rounded-lg bg-neutral-800">
-                    <div class="w-full">
-                        <img src="./img/poscon-logo512.png" class="inline m-2 w-[75px] float-right">
-                        <h3 class="font-[600] text-[1.5rem]">POSCON</h3>
-                        <p class="mb-2">Positive Control Network - POSCON, is the next-generation flight simulation network. Serving both hobbiests and professional entities, POSCON HQ houses all operations on the network.</p>
-                    </div>
-                    <div class="bottom flex flex-wrap gap-2 justify-between">
-                        <div class="flex flex-wrap items-end text-[0.8rem] font-[600] gap-2">
-                            <div class="bg-slate-600 rounded-full px-2 py-1">TypeScript</div>
-                            <div class="bg-slate-600 rounded-full px-2 py-1">NodeJS</div>
-                            <div class="bg-slate-600 rounded-full px-2 py-1">Nuxt 3</div>
-                            <div class="bg-slate-600 rounded-full px-2 py-1">Tauri</div>
-                        </div>
-                        <a href="https://hq.poscon.net" target="_blank" class="px-4 py-2 font-[600] rounded-md bg-blue-500">Visit</a>
-                    </div>
+        <section class="flex justify-center py-8">
+            <div class="responsive flex justify-center flex-wrap gap-10">
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/python.svg" alt="python" title="Python" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Python</span>
                 </div>
-
-                <div class="flex flex-col justify-between gap-4 p-4 rounded-lg bg-neutral-800">
-                    <div class="w-full">
-                        <img src="./img/activepieces-logo.svg" class="inline m-2 w-[75px] float-right">
-                        <h3 class="font-[600] text-[1.5rem]">Activepieces</h3>
-                        <p class="mb-2">Activepieces is an open-source business automation tool, an alternative to Zapier.</p>
-                    </div>
-                    <div class="bottom flex flex-wrap gap-2 justify-between">
-                        <div class="flex flex-wrap items-end text-[0.8rem] font-[600] gap-2">
-                            <div class="bg-slate-600 rounded-full px-2 py-1">TypeScript</div>
-                            <div class="bg-slate-600 rounded-full px-2 py-1">Angular</div>
-                        </div>
-                        <a href="https://www.activepieces.com/" target="_blank" class="px-4 py-2 font-[600] rounded-md bg-blue-500">Visit</a>
-                    </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/ts.svg" alt="ts" title="TypeScript" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">TypeScript</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/django.svg" alt="django" title="Django" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Django</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/node.svg" alt="nodejs" title="NodeJS" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">NodeJS</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/nestjs.svg" alt="nestjs" title="NestJS" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">NestJS</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/tauri.svg" alt="tauri" title="Tauri" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Tauri</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/angular.svg" alt="angular" title="Angular" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Angular</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/vue.svg" alt="vue" title="Vue 3" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Vue 3</span>
+                </div>
+                <div class="group/icon icon inline-flex flex-col justify-center gap-2">
+                    <img src="./img/nuxt.svg" alt="nuxt" title="Nuxt 3" class="h-[1.5rem]">
+                    <span class="text-black opacity-0 duration-200 group-hover/icon:opacity-100">Nuxt 3</span>
                 </div>
             </div>
         </section>
     </main>
 </body>
-<script src="typing-animation.js"></script>
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/abaza738/support-palestine@main/src/support-palestine-banner.js"></script>
 </html>

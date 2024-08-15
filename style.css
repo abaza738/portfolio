@@ -1,6 +1,6 @@
 :root {
-    --background: #152025;
-    --text: #f0f5ff;
+    --background: hsl(225, 15%, 5%);
+    --text: #f5f5ff;
 }
 
 html,
@@ -8,32 +8,55 @@ body {
     margin: 0;
     box-sizing: border-box;
     min-height: 100vh;
+    display: flex;
+    flex: 1;
     font-size: 14px;
     font-family: 'Exo';
-    font-weight: 200;
+    font-weight: 400;
     background-color: var(--background);
     color: var(--text);
     transition: 300ms;
 }
 
-.header {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+.icon {
+    filter: invert(1) opacity(0.5);
 }
 
-.header > * {
-    z-index: 2;
+.responsive {
+    width: 95%;
 }
 
-.header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2020205f;
-    z-index: 1;
+@media screen and (min-width: 640px) {
+    .responsive {
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .responsive {
+        width: 768px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .responsive {
+        width: 1024px;
+    }
+}
+@media screen and (min-width: 1536px) {
+    .responsive {
+        width: 1280px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animate-slide-down {
+    animation: slideDown 1.5s ease-out forwards;
 }
