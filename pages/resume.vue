@@ -12,7 +12,7 @@
 
     <h3 class="section-title">Skills</h3>
 
-    <div class="grid grid-cols-3 gap-4 text-white/75 max-w-[50%]">
+    <div class="grid grid-cols-3 gap-4 text-white/75 md:max-w-[50%]">
       <div class="inline-flex items-center gap-2">
         <NuxtImg src="/img/python.svg" class="h-[1.25rem]" alt="python" title="Python" />
         <span>Python</span>
@@ -53,19 +53,19 @@
 
     <h3 class="section-title">Experience</h3>
 
-    <div class="flex flex-col gap-4 max-w-[50%]">
+    <div class="flex flex-col gap-4 md:max-w-[50%]">
       <Milestone v-for="e in experience" :key="e.entity" :milestone="e" />
     </div>
 
     <h3 class="section-title">Education</h3>
     
-    <div class="flex flex-col gap-4 max-w-[50%]">
+    <div class="flex flex-col gap-4 md:max-w-[50%]">
       <Milestone v-for="e in education" :key="e.entity" :milestone="e" />
     </div>
 
     <h3 class="section-title">Volunteer</h3>
 
-    <div class="flex flex-col gap-4 max-w-[50%]">
+    <div class="flex flex-col gap-4 md:max-w-[50%]">
       <Milestone v-for="v in volunteer" :key="v.entity" :milestone="v" />
     </div>
   </div>
