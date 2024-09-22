@@ -1,0 +1,55 @@
+@use './fonts.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  --bg-dark: hsl(225, 15%, 5%);
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100dvh;
+  line-height: 1.5;
+  background-color: var(--bg-dark);
+  font-family: 'Qaz';
+  font-size: 14px;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-inline: theme('spacing.4');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5 !important;
+}
+
+#__nuxt {
+  @apply flex flex-1 flex-col;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 100ms linear;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.responsive {
+  @apply mx-auto w-full sm:w-[500px] md:w-[700px] lg:w-[800px] xl:w-[1000px] 2xl:w-[1200px];
+}

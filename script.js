@@ -1,1 +1,0 @@
-document.getElementsByClassName('header')[0].style.backgroundImage = `url(./img/background-${Math.floor(Math.random() * 4)}.svg)`;
