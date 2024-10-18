@@ -60,12 +60,13 @@ defineExpose({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 dialog {
   min-width: 300px;
   max-height: 90%;
   max-width: 90%;
-  background: var(--bg-dark);
+  background: color-mix(in srgb, var(--bg-dark) 40%, transparent 60%);
+  backdrop-filter: blur(6px);
   color: white;
   border-radius: theme('borderRadius.lg');
   overflow: hidden;

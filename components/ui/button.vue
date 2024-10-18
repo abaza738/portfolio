@@ -15,8 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 interface Props {
   label?: string
   size?: 'sm' | 'md' | 'lg'
@@ -33,9 +31,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const sizeClasses = computed(() => {
   switch (props.size) {
-    case 'sm': return 'text-xs'
-    case 'lg': return 'text-ms'
-    default: return 'text-sm'
+    case 'sm':
+      return 'text-xs'
+    case 'lg':
+      return 'text-ms'
+    default:
+      return 'text-sm'
   }
 })
 

@@ -1,17 +1,43 @@
 <template>
   <nav class="sticky top-0 flex items-center justify-between bg-dark/50 border-b border-white/5 backdrop-blur z-20 select-none">
     <div class="relative responsive text-sm py-4 uppercase flex items-center gap-8">
-      <NuxtLink class="text-white/30" active-class="!text-white" to="/">
+      <NuxtLink class="hidden sm:flex text-white/30" active-class="!text-white" to="/">
         Abaza.dev
       </NuxtLink>
 
-      <NuxtLink class="text-white/30" active-class="!text-white" to="/resume">
-        Resume
+      <NuxtLink class="hidden sm:flex text-white/30" active-class="!text-white" to="/resume">
+        Resumé
       </NuxtLink>
 
-      <NuxtLink class="text-white/30" active-class="!text-white" to="/interests">
+      <NuxtLink class="hidden sm:flex text-white/30" :class="{ '!text-white': $route.path.startsWith('/interests') }" to="/interests">
         Interests
       </NuxtLink>
+
+      <NuxtLink class="hidden sm:flex text-white/30" active-class="!text-white" to="/prs">
+        Contributoins
+      </NuxtLink>
+
+      <Icon class="inline sm:hidden text-3xl cursor-pointer" name="mdi:hamburger" @click="drawer?.open()" />
+
+      <UiDrawer ref="drawer">
+        <div class="flex flex-col gap-4 text-lg">
+          <NuxtLink class="text-white/30" active-class="!text-white" to="/">
+            Abaza.dev
+          </NuxtLink>
+  
+          <NuxtLink class="text-white/30" active-class="!text-white" to="/resume">
+            Resumé
+          </NuxtLink>
+  
+          <NuxtLink class="text-white/30" :class="{ '!text-white': $route.path.startsWith('/interests') }" to="/interests">
+            Interests
+          </NuxtLink>
+  
+          <NuxtLink class="text-white/30" active-class="!text-white" to="/prs">
+            Contributoins
+          </NuxtLink>
+        </div>
+      </UiDrawer>
 
       <NuxtImg src="/img/palestine-flag@3x.svg" class="cursor-pointer absolute top-0 right-0 h-full hover:scale-[1.2] origin-top" @click="dialogRef?.open()" />
     </div>
@@ -43,7 +69,6 @@
 </template>
 
 <script setup lang="ts">
-import type { UiDialog } from '#components'
-
-const dialogRef = ref<InstanceType<typeof UiDialog> | null>(null)
+const dialogRef = useTemplateRef('dialogRef')
+const drawer = useTemplateRef('drawer')
 </script>
