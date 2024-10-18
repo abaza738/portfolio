@@ -19,6 +19,14 @@
 
       <NuxtLink
         class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        to="https://youtube.com/@abaza738"
+        target="_blank"
+      >
+        <Icon class="text-lg" name="fa6-brands:youtube" /> YouTube
+      </NuxtLink>
+
+      <NuxtLink
+        class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
         @click="copyUsername"
         target="_blank"
       >
