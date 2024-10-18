@@ -72,6 +72,10 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  titleTemplate: (title?: string) => `${title} | Resumé`
+})
+
 const experience: ResumeMilstone[] = [
   {
     title: 'Software Engineer',
