@@ -2,7 +2,7 @@
   <section class="space-y-2 pb-4 border-b border-dashed border-white/10 last:border-transparent">
     <p class="text-xs uppercase text-white/50">{{ milestone.timePeriod }}</p>
     
-    <h5 class="text-sm text-white/75">{{ milestone.title }}</h5>
+    <h5 class="text-lg text-amber-300/50">{{ milestone.title }}</h5>
 
     <NuxtLink :to="milestone.link" target="_blank">
       {{ milestone.entity }}
@@ -21,7 +21,9 @@ defineProps<{
 <style scoped>
 section a {
   width: fit-content;
-  font-size: theme('fontSize.4xl');
+  color: theme('colors.amber.300');
+  font-family: 'Config Condensed Bold';
+  font-size: theme('fontSize.5xl');
   font-weight: 800;
   position: relative;
 

@@ -3,13 +3,13 @@
     <div class="overlay"></div>
 
     <section class="responsive flex flex-1 flex-col gap-8 py-8">
-      <div class="flex flex-col gap-4 my-auto">
-        <Transition name="slide-down" appear>
-          <h1 v-if="active" class="text-4xl font-bold">Maher Abaza</h1>
-        </Transition>
-
-        <p class="text-lg">Hey, I'm Maher, a software engineer based in Jordan.</p>
-      </div>
+      <Transition name="slide-down" appear>
+        <div v-if="active" class="flex flex-col my-auto">
+          <p>Hello, I am</p>
+          <h1 class="text-6xl md:text-8xl -mt-4 font-black text-amber-300">Maher Abaza.</h1>
+          <p class="-mt-2 text-xl font-bold">A <span class="text-amber-300">software engineer</span> based in Jordan.</p>
+        </div>
+      </Transition>
     </section>
   </main>
 </template>

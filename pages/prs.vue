@@ -1,8 +1,8 @@
 <template>
   <div class="responsive flex flex-1 flex-col gap-8 pt-8">
     <section>
-      <p class="text-sm text-white/50 ms-8 font-mono">recent</p>
-      <h1 class="text-3xl -mt-3"><Icon name="solar:code-2-bold" /> Contributions</h1>
+      <p class="text-sm text-amber-300/50 ms-14 font-mono">recent</p>
+      <h2 class="text-4xl -mt-3"><Icon name="solar:code-2-bold" /> Contributions</h2>
     </section>
 
     <div class="flex-1 flex flex-col">
@@ -28,7 +28,7 @@
 
           <code>
             <NuxtLink
-              class="underline underline-offset-4 text-white/50 hover:text-white"
+              class="underline underline-offset-4 text-white/50 hover:text-amber-300"
               target="_blank"
               :to="'https://github.com/' + pr.repo"
             >

@@ -127,12 +127,12 @@ const volunteer: ResumeMilstone[] = [
 
 <style scoped>
 h3.section-title {
-  color: rgba(255, 255, 255, 50%);
-  font-weight: bold;
+  font-size: theme('fontSize.lg');
+  color: rgba(255, 255, 255, 75%);
   text-transform: uppercase;
   text-decoration: underline;
   text-underline-offset: 10px;
-  text-decoration-color: hsl(225, 35%, 15%);
+  text-decoration-color: theme('colors.amber.900');
   padding-bottom: theme('spacing.2');
   letter-spacing: 8px;
 }
