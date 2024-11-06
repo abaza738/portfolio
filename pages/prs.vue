@@ -76,7 +76,7 @@ useHead({
   titleTemplate: (title?: string) => `${title} | Contributions`
 })
 
-const { data, status } = await useFetch<Contributions>('/api/contributions')
+const { data, status } = useFetch<Contributions>('/api/contributions')
 </script>
 
 <style scoped>
