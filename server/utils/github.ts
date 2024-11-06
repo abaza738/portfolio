@@ -4,9 +4,11 @@ import { Octokit } from 'octokit'
 let _octokit: Octokit
 
 export function useOctokit() {
+  const { githubToken } = useRuntimeConfig()
+
   if (!_octokit) {
     _octokit = new Octokit({
-      auth: process.env.NUXT_GITHUB_TOKEN
+      auth: githubToken
     })
   }
   return _octokit

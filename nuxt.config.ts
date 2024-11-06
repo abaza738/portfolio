@@ -27,6 +27,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
   compatibilityDate: '2024-09-19',
 
+  runtimeConfig: {
+    githubToken: process.env.NUXT_GITHUB_TOKEN
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
