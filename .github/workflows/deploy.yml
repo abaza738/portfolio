@@ -59,4 +59,5 @@ jobs:
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "which pm2"
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "pm2 restart portfolio"
