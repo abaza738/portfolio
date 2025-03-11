@@ -50,7 +50,7 @@ jobs:
 
     - name: Copy files via SCP
       run: |
-        scp -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key output.tar.gz $SSH_USERNAME@$SSH_HOST:/maher/portfolio
+        scp output.tar.gz ops:/maher/portfolio
 
     - name: Extract files on the server
       run: |
