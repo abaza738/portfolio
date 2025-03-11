@@ -27,31 +27,34 @@ jobs:
     - name: Build the project
       run: pnpm build
 
-    - name: Add server to known_hosts
+    - name: Configure SSH
       run: |
-        mkdir -p ~/.ssh
-        ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        mkdir -p ~/.ssh/
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/github_deploy_key
+        chmod 600 ~/.ssh/github_deploy_key
+        cat >>~/.ssh/config <<END
+        Host ops
+          HostName $SSH_HOST
+          User $SSH_USERNAME
+          IdentityFile ~/.ssh/github_deploy_key
+          StrictHostKeyChecking no
+        END
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+
 
     - name: Compress files
       run: tar -czvf output.tar.gz ./.output ./ecosystem.config.cjs
 
     - name: Copy files via SCP
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/github_deploy_key
-        chmod 600 ~/.ssh/github_deploy_key
         scp -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key output.tar.gz $SSH_USERNAME@$SSH_HOST:/maher/portfolio
 
     - name: Extract files on the server
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "tar -xzvf /maher/portfolio/output.tar.gz -C /maher/portfolio"
+        ssh ops 'bash -ic "tar -xzvf /maher/portfolio/output.tar.gz -C /maher/portfolio"'
 
     - name: Restart PM2 process
       env:
@@ -59,5 +62,4 @@ jobs:
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "which pm2"
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "pm2 restart portfolio"
+        ssh ops 'bash -ic "pm2 restart portfolio"'
