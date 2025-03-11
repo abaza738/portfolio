@@ -56,6 +56,6 @@ jobs:
       run: |
         ssh -tt ops 'bash -ic "rm -rf /maher/portfolio/.output && tar -xzvf /maher/portfolio/output.tar.gz -C /maher/portfolio && rm /maher/portfolio/output.tar.gz"'
 
-    - name: Restart PM2 process
+    - name: Ensure PM2 process is running
       run: |
-        ssh -tt ops 'bash -ic "pm2 restart portfolio"'
+        ssh -tt ops 'bash -ic "cd /maher/portfolio && pm2 start ecosystem.config.cjs --update-env"'
