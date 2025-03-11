@@ -1,0 +1,45 @@
+name: Deploy to Linux Server
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Build the project
+      run: pnpm build
+
+    - name: Copy files via SCP
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/github_deploy_key
+        chmod 600 ~/.ssh/github_deploy_key
+        scp -r ./.output $SSH_USERNAME@$SSH_HOST:/maher/portfolio
+        scp ./ecosystem.config.cjs $SSH_USERNAME@$SSH_HOST:/maher/portfolio
+
+    - name: Restart PM2 process
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      run: |
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key $SSH_USERNAME@$SSH_HOST "pm2 restart portfolio"
