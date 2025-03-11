@@ -13,19 +13,21 @@ export default defineNuxtConfig({
     typedPages: true
   },
 
+  future: {
+    compatibilityVersion: 4
+  },
+
   imports: {
-    dirs: ['./types/**', './stores/**']
+    dirs: ['./types/**', './**/*/stores/**']
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
-  },
-
-  modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
-  compatibilityDate: '2024-09-19',
+  modules: [
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss'
+  ],
 
   runtimeConfig: {
     githubToken: process.env.NUXT_GITHUB_TOKEN
@@ -39,5 +41,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  compatibilityDate: '2025-03-11'
 })

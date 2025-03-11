@@ -9,6 +9,9 @@
 
 <script setup lang="ts">
 useSeoMeta({
+  description: 'My portfolio',
+  ogUrl: 'https://abaza.dev',
+  twitterImage: '/img/og-image.png',
   charset: 'utf-8',
   author: 'Maher Abaza, maher.abaza@proton.me',
   robots: 'index, follow',
@@ -16,14 +19,17 @@ useSeoMeta({
   ogTitle: 'Maher Abaza',
   ogDescription: 'My portfolio',
   ogType: 'profile',
-  ogImage: '/img/abaza738-512.png',
+  ogImage: '/img/og-image.png',
   ogImageType: 'image/png',
-  ogImageWidth: 50,
-  ogImageHeight: 50,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   themeColor: '#040606'
 })
 
 useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
   bodyAttrs: {
     class: 'dark'
   },

@@ -70,7 +70,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Contributions } from '~/types/github'
+import type { Contributions } from '~~/types/github'
 
 useHead({
   titleTemplate: (title?: string) => `${title} | Contributions`
