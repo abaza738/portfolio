@@ -27,17 +27,21 @@ jobs:
     - name: Build the project
       run: pnpm build
 
+    - name: Add server to known_hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
     - name: Copy files via SCP
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
-        mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/github_deploy_key
         chmod 600 ~/.ssh/github_deploy_key
-        scp -r ./.output $SSH_USERNAME@$SSH_HOST:/maher/portfolio
-        scp ./ecosystem.config.cjs $SSH_USERNAME@$SSH_HOST:/maher/portfolio
+        scp -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key -r ./.output $SSH_USERNAME@$SSH_HOST:/maher/portfolio
+        scp -o StrictHostKeyChecking=no -i ~/.ssh/github_deploy_key ./ecosystem.config.cjs $SSH_USERNAME@$SSH_HOST:/maher/portfolio
 
     - name: Restart PM2 process
       env:
