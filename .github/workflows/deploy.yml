@@ -54,12 +54,8 @@ jobs:
 
     - name: Extract files on the server
       run: |
-        ssh -tt ops 'bash -ic "tar -xzvf /maher/portfolio/output.tar.gz -C /maher/portfolio"'
+        ssh -tt ops 'bash -ic "rm -rf /maher/portfolio/.output tar -xzvf /maher/portfolio/output.tar.gz -C /maher/portfolio && rm /maher/portfolio/output.tar.gz"'
 
     - name: Restart PM2 process
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: |
         ssh -tt ops 'bash -ic "pm2 restart portfolio"'
