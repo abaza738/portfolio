@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: Production
 
     steps:
     - name: Checkout code
@@ -26,9 +28,9 @@ jobs:
       run: pnpm install --frozen-lockfile
 
     - name: Build the project
+      run: pnpm build
       env:
         NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
-      run: pnpm build
 
     - name: Compress build artifacts
       run: tar -czvf output.tar.gz ./.output ./ecosystem.config.cjs
@@ -42,6 +44,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    environment:
+      name: Production
+      url: https://abaza.dev
 
     steps:
     - name: Download build artifacts
@@ -49,6 +54,13 @@ jobs:
       with:
         name: build-artifacts
         path: .
+
+    - name: Create GitHub deployment
+      uses: chrnorm/deployment-action@v2
+      id: deployment
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        description: 'Production deployment'
 
     - name: Configure SSH
       run: |
@@ -78,15 +90,3 @@ jobs:
       run: |
         ssh -tt ops 'bash -ic "cd /maher/portfolio && pm2 start ecosystem.config.cjs --update-env"'
 
-    - name: Create deployment
-      run: |
-        curl -X POST \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/${{ github.repository }}/deployments \
-          -d '{
-            "ref": "${{ github.ref }}",
-            "environment": "production",
-            "description": "Deploying to production",
-            "required_contexts": []
-          }'
