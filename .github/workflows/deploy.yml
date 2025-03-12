@@ -1,4 +1,4 @@
-name: Deploy to Linux Server
+name: Build and Deploy to Linux Server
 
 on:
   push:
@@ -6,26 +6,49 @@ on:
       - 'v*.*.*'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      uses: actions/checkout@v4
 
     - name: Install pnpm
-      run: npm install -g pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Install node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: pnpm
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
 
     - name: Build the project
+      env:
+        NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
       run: pnpm build
+
+    - name: Compress build artifacts
+      run: tar -czvf output.tar.gz ./.output ./ecosystem.config.cjs
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts
+        path: output.tar.gz
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-artifacts
+        path: .
 
     - name: Configure SSH
       run: |
@@ -44,13 +67,8 @@ jobs:
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
 
-
-    - name: Compress files
-      run: tar -czvf output.tar.gz ./.output ./ecosystem.config.cjs
-
     - name: Copy files via SCP
-      run: |
-        scp output.tar.gz ops:/maher/portfolio
+      run: scp output.tar.gz ops:/maher/portfolio
 
     - name: Extract files on the server
       run: |
@@ -59,3 +77,16 @@ jobs:
     - name: Ensure PM2 process is running
       run: |
         ssh -tt ops 'bash -ic "cd /maher/portfolio && pm2 start ecosystem.config.cjs --update-env"'
+
+    - name: Create deployment
+      run: |
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/deployments \
+          -d '{
+            "ref": "${{ github.ref }}",
+            "environment": "production",
+            "description": "Deploying to production",
+            "required_contexts": []
+          }'
