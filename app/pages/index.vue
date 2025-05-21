@@ -2,7 +2,7 @@
   <main class="flex flex-1 flex-col items-center px-4">
     <div class="overlay"></div>
 
-    <section class="responsive flex flex-1 flex-col gap-8 py-8">
+    <section class="relative responsive flex flex-1 flex-col gap-8 py-8">
       <Transition name="slide-down" appear>
         <div v-if="active" class="flex flex-col my-auto">
           <p>Hello, I am</p>
@@ -10,6 +10,15 @@
           <p class="-mt-2 text-xl font-bold">A <span class="text-amber-300">software engineer</span> based in Jordan.</p>
         </div>
       </Transition>
+
+      <NuxtLink
+        class="absolute bottom-0 right-0 text-white/10 hover:text-white/50"
+        to="https://circassian-genocide.org/"
+        external
+        target="_blank"
+      >
+        What does "Circassian" mean?
+      </NuxtLink>
     </section>
   </main>
 </template>
