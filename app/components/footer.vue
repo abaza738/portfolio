@@ -2,6 +2,14 @@
   <section class="flex flex-col items-center justify-center gap-4 py-8 text-sm text-white/20 select-none">
     <div class="responsive flex justify-center flex-wrap gap-8">
       <NuxtLink
+        class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        href="mailto:contact@abaza.dev"
+        target="_blank"
+      >
+        <Icon class="text-lg" name="fa6-solid:at" /> Email
+      </NuxtLink>
+
+      <NuxtLink
         class="hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
         to="https://github.com/abaza738"
         target="_blank"
@@ -39,7 +47,7 @@
       <NuxtLink class="hover:underline underline-offset-4 hover:text-white/50" to="https://nuxt.com" target="_blank">
         Nuxt
       </NuxtLink>
-      <span> &copy; Maher Abaza - 2024</span>
+      <span> &copy; Maher Abaza - 2025</span>
     </p>
   </section>
 </template>
