@@ -14,13 +14,13 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.10.3",
-    "@nuxt/image": "^1.9.0",
+    "@nuxt/icon": "^1.13.0",
+    "@nuxt/image": "^1.10.0",
     "@pinia/nuxt": "^0.10.1",
-    "nuxt": "^3.16.0",
-    "octokit": "^4.1.2",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "nuxt": "^3.17.4",
+    "octokit": "^4.1.4",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -28,13 +28,13 @@
     "@iconify-json/heroicons": "^1.2.2",
     "@iconify-json/solar": "^1.2.2",
     "@iconify-json/uil": "^1.2.3",
-    "@nuxtjs/tailwindcss": "^6.13.2",
-    "@vueuse/core": "^13.0.0",
-    "@vueuse/nuxt": "^13.0.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@vueuse/core": "^13.2.0",
+    "@vueuse/nuxt": "^13.2.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "sass": "^1.85.1",
+    "sass": "^1.89.0",
     "tailwindcss": "^3.4.17"
   },
-  "packageManager": "pnpm@10.6.2"
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }
