@@ -1,7 +1,7 @@
 <template>
   <div class="responsive flex flex-1 flex-col gap-4 py-4 select-none">
     
-    <section class="ferrari">
+    <section class="ferrari p-8 md:p-12">
       <div class="overlay"></div>
 
       <div class="flex flex-col gap-4 z-10">
@@ -14,7 +14,7 @@
     </section>
 
     
-    <section class="aviation text-end">
+    <section class="aviation p-8 md:p-12 text-end">
       <div class="overlay"></div>
       
       <div class="flex flex-col gap-4 z-10">
@@ -37,7 +37,6 @@ section {
   justify-content: center;
 
   position: relative;
-  padding: 2rem;
   border-radius: 0.5rem;
   overflow: hidden;
 
@@ -61,7 +60,7 @@ section {
     h3::after {
       content: '';
       display: block;
-      width: theme('fontSize.8xl');
+      width: var(--text-8xl);
       height: 6px;
       background-color: #c6281c;
       z-index: 10;
@@ -75,7 +74,7 @@ section {
       content: '';
       display: block;
       margin-inline-start: auto;
-      width: theme('fontSize.8xl');
+      width: var(--text-8xl);
       height: 6px;
       background-color: #4f46e5;
       z-index: 10;
@@ -90,10 +89,6 @@ section {
     height: 100%;
     background-color: rgba(0,0,0, 0.4);
     backdrop-filter: blur(3px);
-  }
-
-  @screen md {
-    padding: 6rem;
   }
 }
 </style>

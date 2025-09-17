@@ -83,20 +83,20 @@ const { data, status } = useFetch<Contributions>('/api/contributions')
 .pr {
   display: flex;
   justify-content: space-between;
-  gap: theme('spacing.4');
-  padding: theme('spacing.4');
+  gap: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4);
   background-color: hsla(245deg 100% 80% / 3%);
   filter: saturate(20%);
   transition: all 0.2s linear;
 
   &:first-child {
-    border-top-left-radius: theme('borderRadius.lg');
-    border-top-right-radius: theme('borderRadius.lg');
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
   }
 
   &:last-child {
-    border-bottom-left-radius: theme('borderRadius.lg');
-    border-bottom-right-radius: theme('borderRadius.lg');
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
   }
 
   &:hover {
@@ -108,8 +108,8 @@ const { data, status } = useFetch<Contributions>('/api/contributions')
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: theme('spacing.1');
-    font-size: theme('fontSize.xs');
+    gap: calc(var(--spacing) * 1);
+    font-size: var(--text-xs);
   }
 }
 </style>

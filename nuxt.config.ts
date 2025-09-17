@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite"
+
 export default defineNuxtConfig({
   app: {
     pageTransition: {
@@ -6,15 +8,13 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/scss/main.scss'],
+  css: ['assets/css/main.css'],
   devtools: { enabled: true },
+
+  compatibilityDate: '2025-08-13',
 
   experimental: {
     typedPages: true
-  },
-
-  future: {
-    compatibilityVersion: 4
   },
 
   imports: {
@@ -25,8 +25,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@pinia/nuxt'
   ],
 
   runtimeConfig: {
@@ -34,14 +33,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern'
-        }
-      }
-    }
-  },
-
-  compatibilityDate: '2025-03-11'
+    plugins: [tailwindcss()]
+  }
 })

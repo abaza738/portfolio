@@ -17,7 +17,7 @@
         Contributoins
       </NuxtLink>
 
-      <Icon class="inline sm:hidden text-3xl cursor-pointer" name="mdi:hamburger" @click="drawer?.open()" />
+      <Icon class="inline sm:!hidden text-3xl cursor-pointer" name="mdi:hamburger" @click="drawer?.open()" />
 
       <UiDrawer ref="drawer">
         <div class="flex flex-col gap-4 text-lg">

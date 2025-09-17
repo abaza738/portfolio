@@ -1,11 +1,13 @@
-@use './fonts.scss';
+@import url('./fonts.css');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @theme static {
+} */
 
 * {
-  --bg-dark: hsl(225, 15%, 5%);
+  --color-dark: hsl(225, 15%, 5%);
   box-sizing: border-box;
   transition: all 200ms ease-in-out;
 }
@@ -15,7 +17,7 @@ body {
   margin: 0;
   min-height: 100dvh;
   line-height: 1.5;
-  background-color: var(--bg-dark);
+  background-color: var(--color-dark);
   font-family: 'Qaz';
   font-size: 13px;
   color: white;
@@ -28,7 +30,7 @@ code {
 body {
   display: flex;
   flex-direction: column;
-  padding-inline: theme('spacing.4');
+  padding-inline: calc(var(--spacing) * 4);
 }
 
 h1,
@@ -42,7 +44,9 @@ h6 {
 }
 
 #__nuxt {
-  @apply flex flex-1 flex-col;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .v-enter-active,
@@ -56,5 +60,7 @@ h6 {
 }
 
 .responsive {
+  margin: auto;
+  width: 100%;
   @apply mx-auto w-full sm:w-[500px] md:w-[700px] lg:w-[800px] xl:w-[1000px] 2xl:w-[1200px];
 }

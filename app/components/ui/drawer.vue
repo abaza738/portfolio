@@ -41,7 +41,7 @@ defineExpose({
 
 <style scoped>
 .root {
-  background-color: color-mix(in lab, var(--bg-dark) 90%, transparent 10%);;
+  background-color: color-mix(in lab, var(--color-dark) 90%, transparent 10%);
 }
 
 .slide-in-enter-active,

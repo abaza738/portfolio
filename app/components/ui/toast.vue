@@ -34,9 +34,9 @@ const icon = computed(() => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: theme('spacing.1');
-  padding: theme('spacing.2') theme('spacing.4');
-  border-radius: theme('borderRadius.md');
+  gap: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  border-radius: var(--radius-md);
   overflow: hidden;
 
   &[data-type='error'] {

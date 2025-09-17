@@ -60,15 +60,16 @@ defineExpose({
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 dialog {
   min-width: 300px;
   max-height: 90%;
   max-width: 90%;
-  background: color-mix(in srgb, var(--bg-dark) 40%, transparent 60%);
+  margin: auto;
+  background: color-mix(in srgb, var(--color-dark) 40%, transparent 60%);
   backdrop-filter: blur(6px);
   color: white;
-  border-radius: theme('borderRadius.lg');
+  border-radius: var(--radius-lg);
   overflow: hidden;
 
   &::backdrop {
@@ -78,9 +79,9 @@ dialog {
   .title {
     display: flex;
     align-items: center;
-    padding: theme('spacing.4');
+    padding: calc(var(--spacing) * 4);
     border-bottom: 1px solid hsla(0deg, 100%, 100%, 0.1);
-    font-size: theme('fontSize.xl');
+    font-size: var(--text-xl);
     font-weight: bold;
 
     .close {
@@ -92,8 +93,8 @@ dialog {
   .content {
     display: flex;
     flex-direction: column;
-    gap: theme('spacing.2');
-    padding: theme('spacing.4');
+    gap: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 4);
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <button
     :class="[
-      'px-4 py-1 rounded-lg',
+      'cursor-pointer px-4 py-1 rounded-lg',
       sizeClasses,
       variantClasses,
       { 'opacity-50 cursor-not-allowed': disabled }

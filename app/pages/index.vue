@@ -42,7 +42,7 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: color-mix(in lab, var(--bg-dark) 95%, transparent 5%);
+    background-color: color-mix(in lab, var(--color-dark) 95%, transparent 5%);
     width: 100%;
     height: 100%;
   }

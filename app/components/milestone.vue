@@ -21,9 +21,9 @@ defineProps<{
 <style scoped>
 section a {
   width: fit-content;
-  color: theme('colors.amber.300');
+  color: var(--color-amber-300);
   font-family: 'Config Condensed Bold';
-  font-size: theme('fontSize.5xl');
+  font-size: var(--text-5xl);
   font-weight: 800;
   position: relative;
 
