@@ -27,6 +27,13 @@ export default defineNuxtConfig({
     '@pinia/nuxt'
   ],
 
+  nitro: {
+    preset: 'cloudflare-worker',
+    cloudflare: {
+      deployConfig: true
+    }
+  },
+
   runtimeConfig: {
     githubToken: import.meta.env.NUXT_GITHUB_TOKEN
   },
