@@ -1,29 +1,33 @@
 @font-face {
-  font-family: "Qaz";
-  src: url("assets/fonts/qaz.ttf") format("truetype");
+	font-family: "Qaz";
+	src: url("assets/fonts/qaz.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Config Condensed Black';
-  src: url("assets/fonts/Config Condensed/ConfigCondensed-Black.ttf") format("truetype");
+	font-family: "Config Condensed Black";
+	src: url("assets/fonts/Config Condensed/ConfigCondensed-Black.ttf")
+		format("truetype");
 }
 
 @font-face {
-  font-family: 'Config Condensed Bold';
-  src: url("assets/fonts/Config Condensed/ConfigCondensed-Bold.ttf") format("truetype");
+	font-family: "Config Condensed Bold";
+	src: url("assets/fonts/Config Condensed/ConfigCondensed-Bold.ttf")
+		format("truetype");
 }
 
 @font-face {
-  font-family: 'Config Condensed Medium';
-  src: url("assets/fonts/Config Condensed/ConfigCondensed-Medium.ttf") format("truetype");
+	font-family: "Config Condensed Medium";
+	src: url("assets/fonts/Config Condensed/ConfigCondensed-Medium.ttf")
+		format("truetype");
 }
 
 @font-face {
-  font-family: 'Config Condensed SemiBold';
-  src: url("assets/fonts/Config Condensed/ConfigCondensed-SemiBold.ttf") format("truetype");
+	font-family: "Config Condensed SemiBold";
+	src: url("assets/fonts/Config Condensed/ConfigCondensed-SemiBold.ttf")
+		format("truetype");
 }
 
 @font-face {
-  font-family: "iAWriterMono";
-  src: url("assets/fonts/iAWriterMonoV.ttf") format("truetype");
+	font-family: "iAWriterMono";
+	src: url("assets/fonts/iAWriterMonoV.ttf") format("truetype");
 }

@@ -26,10 +26,7 @@ interface Props {
   openOnMount?: boolean
 }
 
-const {
-  title = '',
-  openOnMount = false
-} = defineProps<Props>()
+const { title = '', openOnMount = false } = defineProps<Props>()
 
 const emit = defineEmits<{
   (e: 'open'): void

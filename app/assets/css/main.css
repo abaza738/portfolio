@@ -1,5 +1,5 @@
-@import url('./fonts.css');
-@import 'tailwindcss';
+@import url("./fonts.css");
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -7,30 +7,30 @@
 } */
 
 * {
-  --color-dark: hsl(225, 15%, 5%);
-  box-sizing: border-box;
-  transition: all 200ms ease-in-out;
+	--color-dark: hsl(225, 15%, 5%);
+	box-sizing: border-box;
+	transition: all 200ms ease-in-out;
 }
 
 html,
 body {
-  margin: 0;
-  min-height: 100dvh;
-  line-height: 1.5;
-  background-color: var(--color-dark);
-  font-family: 'Qaz';
-  font-size: 13px;
-  color: white;
+	margin: 0;
+	min-height: 100dvh;
+	line-height: 1.5;
+	background-color: var(--color-dark);
+	font-family: "Qaz";
+	font-size: 13px;
+	color: white;
 }
 
 code {
-  font-family: 'iAWriterMono';
+	font-family: "iAWriterMono";
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  padding-inline: calc(var(--spacing) * 4);
+	display: flex;
+	flex-direction: column;
+	padding-inline: calc(var(--spacing) * 4);
 }
 
 h1,
@@ -39,28 +39,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Config Condensed SemiBold';
-  line-height: 1.5 !important;
+	font-family: "Config Condensed SemiBold";
+	line-height: 1.5 !important;
 }
 
 #__nuxt {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .v-enter-active,
 .v-leave-active {
-  transition: all 100ms linear;
+	transition: all 100ms linear;
 }
 
 .v-enter-from,
 .v-leave-to {
-  opacity: 0;
+	opacity: 0;
 }
 
 .responsive {
-  margin: auto;
-  width: 100%;
-  @apply mx-auto w-full sm:w-[500px] md:w-[700px] lg:w-[800px] xl:w-[1000px] 2xl:w-[1200px];
+	margin: auto;
+	width: 100%;
+	@apply mx-auto w-full sm:w-[500px] md:w-[700px] lg:w-[800px] xl:w-[1000px] 2xl:w-[1200px];
 }

@@ -1,4 +1,4 @@
-import tailwindcss from "@tailwindcss/vite"
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   app: {
@@ -20,12 +20,7 @@ export default defineNuxtConfig({
     dirs: ['./**/*/stores/**']
   },
 
-  modules: [
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    '@pinia/nuxt'
-  ],
+  modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
 
   runtimeConfig: {
     githubToken: import.meta.env.NUXT_GITHUB_TOKEN
