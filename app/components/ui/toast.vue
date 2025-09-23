@@ -9,14 +9,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Toast } from '~~/types/toast'
-
-const props = defineProps<{
+const { toast } = defineProps<{
   toast: Toast
 }>()
 
 const icon = computed(() => {
-  switch (props.toast.type) {
+  switch (toast.type) {
     case 'error':
       return 'solar:danger-bold'
     case 'info':

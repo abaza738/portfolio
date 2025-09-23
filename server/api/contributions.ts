@@ -1,5 +1,3 @@
-import type { Contributions, PullRequest, User } from '~~/types/github'
-
 export default defineCachedEventHandler(
   async (event) => {
     const octokit = useOctokit()

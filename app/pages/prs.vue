@@ -70,10 +70,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Contributions } from '~~/types/github'
-
 useHead({
-  titleTemplate: (title?: string) => `${title} | Contributions`
+  titleTemplate: (title) => `${title} | Contributions`
 })
 
 const { data, status } = useFetch<Contributions>('/api/contributions')

@@ -22,15 +22,15 @@ interface Props {
   disabled?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  label: 'Button',
-  size: 'md',
-  variant: 'primary',
-  disabled: false
-})
+const {
+  label = 'Button',
+  size = 'md',
+  variant = 'primary',
+  disabled = false
+} = defineProps<Props>()
 
 const sizeClasses = computed(() => {
-  switch (props.size) {
+  switch (size) {
     case 'sm':
       return 'text-xs'
     case 'lg':
@@ -41,7 +41,7 @@ const sizeClasses = computed(() => {
 })
 
 const variantClasses = computed(() => {
-  switch (props.variant) {
+  switch (variant) {
     case 'primary':
       return 'bg-blue-700 hover:bg-blue-800 text-white'
     case 'secondary':

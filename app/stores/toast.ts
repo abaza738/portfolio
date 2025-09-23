@@ -1,5 +1,3 @@
-import { type Toast } from '~~/types/toast'
-
 export const useToast = defineStore('toast', () => {
   const toasts = reactive<Record<string, Toast>>({})
 

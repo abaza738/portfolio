@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ['./**/*/types/**', './**/*/stores/**']
+    dirs: ['./**/*/stores/**']
   },
 
   modules: [
@@ -26,13 +26,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt'
   ],
-
-  nitro: {
-    preset: 'cloudflare-worker',
-    cloudflare: {
-      deployConfig: true
-    }
-  },
 
   runtimeConfig: {
     githubToken: import.meta.env.NUXT_GITHUB_TOKEN

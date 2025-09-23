@@ -26,17 +26,17 @@ interface Props {
   openOnMount?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  title: '',
-  openOnMount: false
-})
+const {
+  title = '',
+  openOnMount = false
+} = defineProps<Props>()
 
 const emit = defineEmits<{
   (e: 'open'): void
   (e: 'close'): void
 }>()
 
-const dialogRef = ref<HTMLDialogElement | null>(null)
+const dialogRef = useTemplateRef('dialogRef')
 
 const openDialog = () => {
   dialogRef.value?.showModal()
@@ -49,7 +49,7 @@ const closeDialog = () => {
 }
 
 onMounted(() => {
-  if (props.openOnMount) {
+  if (openOnMount) {
     openDialog()
   }
 })

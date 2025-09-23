@@ -29,6 +29,12 @@
   </div>
 </template>
 
+<script setup lang="ts">
+useHead({
+  titleTemplate: (title) => `${title} | Interests`
+})
+</script>
+
 <style scoped>
 section {
   height: 450px;
