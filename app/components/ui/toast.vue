@@ -9,6 +9,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Toast } from '~~/types/toast'
+
 const props = defineProps<{
   toast: Toast
 }>()

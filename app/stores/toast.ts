@@ -1,9 +1,11 @@
+import { type Toast } from '~~/types/toast'
+
 export const useToast = defineStore('toast', () => {
   const toasts = reactive<Record<string, Toast>>({})
 
   const add = (toast: Partial<Omit<Toast, 'id'>>) => {
     const newToast: Toast = {
-      id: useId() ?? new Date().getTime().toString(),
+      id: new Date().getTime().toString(),
       duration: toast.duration ?? 3e3,
       type: toast.type ?? 'info',
       message: toast.message ?? '',

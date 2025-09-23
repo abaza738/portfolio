@@ -9,7 +9,6 @@ export default defineNuxtConfig({
   },
 
   css: ['assets/css/main.css'],
-  devtools: { enabled: true },
 
   compatibilityDate: '2025-08-13',
 
@@ -18,7 +17,7 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ['./types/**', './**/*/stores/**']
+    dirs: ['./**/*/types/**', './**/*/stores/**']
   },
 
   modules: [
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
-    githubToken: process.env.NUXT_GITHUB_TOKEN
+    githubToken: import.meta.env.NUXT_GITHUB_TOKEN
   },
 
   vite: {
