@@ -26,10 +26,6 @@ export default defineNuxtConfig({
     githubToken: import.meta.env.NUXT_GITHUB_TOKEN
   },
 
-  typescript: {
-    hoist: ['vue', 'nuxt']
-  },
-
   vite: {
     plugins: [tailwindcss()]
   }
