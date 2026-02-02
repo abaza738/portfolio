@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "deploy": "pnpm build && npx --yes wrangler deploy --config .output/server/wrangler.json",
     "check": "npx --yes npm-check-updates",
     "update": "npx --yes npm-check-updates -u && rm -rf ./node_modules && rm pnpm-lock.yaml && pnpm i",
     "lint": "biome lint --write",
