@@ -1,14 +1,17 @@
 <template>
   <section class="space-y-2 pb-4 border-b border-dashed border-white/10 last:border-transparent">
-    <p class="text-xs uppercase text-white/50">{{ milestone.timePeriod }}</p>
-    
-    <h5 class="text-lg text-amber-300/50">{{ milestone.title }}</h5>
+    <div class="flex items-center justify-between">
+      <NuxtLink :to="milestone.link" target="_blank">
+        {{ milestone.entity }}
+      </NuxtLink>
 
-    <NuxtLink :to="milestone.link" target="_blank">
-      {{ milestone.entity }}
-    </NuxtLink>
+      <div class="flex flex-col items-end">
+        <h5 class="text-lg text-amber-300/70">{{ milestone.title }}</h5>
+        <div class="text-xs uppercase text-white/70">{{ milestone.timePeriod }}</div>
+      </div>
+    </div>
 
-    <p class="text-white/75">{{ milestone.description }}</p>
+    <div class="text-white/75" v-html="milestone.description"></div>
   </section>
 </template>
 
@@ -30,5 +33,9 @@ section a {
   &:hover {
     filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.3));
   }
+}
+
+:deep(p) {
+  margin-top: 1rem;
 }
 </style>

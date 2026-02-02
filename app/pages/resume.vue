@@ -14,40 +14,44 @@
 
     <div class="grid grid-cols-3 gap-4 text-white/75 md:max-w-[50%]">
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/python.svg" class="h-[1.25rem]" alt="python" title="Python" />
+        <NuxtImg src="/img/python.svg" class="h-5" alt="python" title="Python" />
         <span>Python</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/ts.svg" class="h-[1.25rem]" alt="ts" title="TypeScript" />
+        <NuxtImg src="/img/ts.svg" class="h-5" alt="ts" title="TypeScript" />
         <span>TypeScript</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/django.svg" class="h-[1.25rem]" alt="django" title="Django" />
+        <NuxtImg src="/img/go.svg" class="h-5" alt="ts" title="GoLang" />
+        <span>GoLang</span>
+      </div>
+      <div class="inline-flex items-center gap-2">
+        <NuxtImg src="/img/docker.svg" class="h-5" alt="ts" title="Docker" />
+        <span>Docker</span>
+      </div>
+      <div class="inline-flex items-center gap-2">
+        <NuxtImg src="/img/django.svg" class="h-5" alt="django" title="Django" />
         <span>Django</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/node.svg" class="h-[1.25rem]" alt="nodejs" title="NodeJS" />
+        <NuxtImg src="/img/node.svg" class="h-5" alt="nodejs" title="NodeJS" />
         <span>NodeJS</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/nestjs.svg" class="h-[1.25rem]" alt="nestjs" title="NestJS" />
+        <NuxtImg src="/img/nestjs.svg" class="h-5" alt="nestjs" title="NestJS" />
         <span>NestJS</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/tauri.svg" class="h-[1.25rem]" alt="tauri" title="Tauri" />
+        <NuxtImg src="/img/tauri.svg" class="h-5" alt="tauri" title="Tauri" />
         <span>Tauri</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/angular.svg" class="h-[1.25rem]" alt="angular" title="Angular" />
-        <span>Angular</span>
-      </div>
-      <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/vue.svg" class="h-[1.25rem]" alt="vue" title="Vue 3" />
+        <NuxtImg src="/img/vue.svg" class="h-5" alt="vue" title="Vue 3" />
         <span>Vue 3</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/nuxt.svg" class="h-[1.25rem]" alt="nuxt" title="Nuxt 3" />
-        <span>Nuxt 3</span>
+        <NuxtImg src="/img/nuxt.svg" class="h-5" alt="nuxt" title="Nuxt" />
+        <span>Nuxt</span>
       </div>
     </div>
 
@@ -81,24 +85,58 @@ const experience: ResumeMilstone[] = [
     title: 'Software Engineer',
     entity: 'Ard Group',
     timePeriod: 'Oct. 2023 - Present',
-    description:
-      'Mainly serving as a frontend developer for "Qarar", a disaster management solution offered by Ard. In addition to that, occasionally engaging in backend development when needed. Using Nuxt 3 and NestJS.',
+    description: `<p>
+      Develop and maintain "Qarar", a disaster management platform for government
+      clients, using Nuxt 3/4 frontend with NestJS backend and PostgreSQL or SQL
+      Server databases.
+      </p>
+
+      <p>
+      Designed and implemented a database-first architecture for weather forecast
+      APIs with optimized views and caching to improve data retrieval efficiency.
+      Built a survey builder supporting multiple input types with review
+      workflows, and developed a TAF visualizer for aviation weather forecasts.
+      </p>
+
+      <p>
+      Manage git workflows, conduct code reviews for a team of three to six
+      developers, and handle deployments while proactively maintaining framework
+      currency and technical standards.
+      </p>`,
     link: 'https://ard.co'
   },
   {
     title: 'Software Engineer',
     entity: 'MakanE',
     timePeriod: 'Sep. 2022 - Oct. 2023',
-    description:
-      'Part of the core MakanE Dev team developing backend services using Django, in addition to frontend features using Vue 2.',
+    description: `<p>
+      Served as a core team member, building and enhancing features for a
+      regional e-commerce platform used by merchants and shoppers, significantly
+      improving backend performance and API security.
+      </p>
+
+      <p>
+      Developed both merchant admin panel and customer storefront features for a
+      B2C e-commerce platform, focusing on performance optimizations and
+      implementing security measures.
+      </p>`,
     link: 'https://makane.com'
   },
   {
     title: 'Full-Stack Web Developer',
     entity: 'RealSoft',
     timePeriod: 'Mar. 2021 - Sep. 2022',
-    description:
-      'Worked with Al Khwarizmi and SSC teams to deliver frontend features using Angular (8, 10, 12) and NodeJS + NestJS for backend services.',
+    description: `<p>
+      Contributed to the development of large-scale government platforms,
+      including a complex survey and data collection system (Al-Khwarizmi) and
+      new features for social security services.
+      </p>
+
+      <p>
+      Developed full-stack features for critical government applications,
+      including a widely-used survey platform, and facilitated internal knowledge
+      sharing through training sessions.
+      </p>`,
     link: 'https://realsoft-me.com'
   }
 ]
@@ -119,7 +157,7 @@ const volunteer: ResumeMilstone[] = [
     entity: 'POSCON',
     timePeriod: '2018 - Present',
     description:
-      'Assisting in the front-end development of the POSCON HQ System and POSCON Launcher client using Tauri + Nuxt 3.',
+      'Assisting in the development of the POSCON HQ System and POSCON Launcher client using Tauri + Nuxt.',
     link: 'https://poscon.net'
   }
 ]
