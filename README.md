@@ -1,75 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Maher Abaza – Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt 4 site (Vue, Tailwind, Pinia). Deploys to Cloudflare Workers on push to `main`.
 
-## Setup
+**Run locally:** `pnpm install` then `pnpm dev`  
+**Build:** `pnpm build`  
+**Lint / format:** `pnpm lint`, `pnpm format`
 
-Make sure to install the dependencies:
+## CI/CD
 
-```bash
-# npm
-npm install
+Workflow: `.github/workflows/deploy-cloudflare.yml`
 
-# pnpm
-pnpm install
+**Secrets** (Settings → Secrets and variables → Actions):
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| Secret | Purpose |
+|--------|--------|
+| `CLOUDFLARE_API_TOKEN` | Deploy to Workers. Create: [API tokens](https://dash.cloudflare.com/?to=/:account/api-tokens) → Edit Cloudflare Workers template. |
+| `CLOUDFLARE_ACCOUNT_ID` | Account ID from Workers & Pages overview. |
+| `NUXT_GITHUB_TOKEN` | GitHub API. |
