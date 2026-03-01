@@ -1,53 +1,55 @@
 <template>
-  <section class="flex flex-col items-center justify-center gap-4 py-8 text-sm text-white/20 select-none">
+  <section
+    class="flex flex-col items-center justify-center gap-4 mt-8 py-8 text-sm select-none"
+  >
     <div class="responsive flex justify-center flex-wrap gap-8">
       <NuxtLink
-        class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        class="inline-flex items-center gap-2"
         href="mailto:contact@abaza.dev"
         target="_blank"
       >
-        <Icon class="text-lg" name="fa6-solid:at" /> Email
+        Email
       </NuxtLink>
 
       <NuxtLink
-        class="hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        class="inline-flex items-center gap-2"
         to="https://github.com/abaza738"
         target="_blank"
       >
-        <Icon class="text-lg" name="fa6-brands:github" /> Github
+        Github
       </NuxtLink>
 
       <NuxtLink
-        class="hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        class="inline-flex items-center gap-2"
         to="https://www.linkedin.com/in/maher-abaza"
         target="_blank"
       >
-        <Icon class="text-lg" name="fa6-brands:linkedin" /> LinkedIn
+        LinkedIn
       </NuxtLink>
 
       <NuxtLink
-        class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        class="inline-flex items-center gap-2"
         to="https://youtube.com/@abaza738"
         target="_blank"
       >
-        <Icon class="text-lg" name="fa6-brands:youtube" /> YouTube
+        YouTube
       </NuxtLink>
 
       <NuxtLink
-        class="cursor-pointer hover:underline underline-offset-4 inline-flex items-center gap-2 hover:text-white/50"
+        class="cursor-pointer inline-flex items-center gap-2"
         @click="copyUsername"
         target="_blank"
       >
-        <Icon class="text-lg" name="fa6-brands:discord" /> Discord
+        Discord
       </NuxtLink>
     </div>
-    <span class="w-20 border-b border-white/20"></span>
+    <span class="w-20 border-b border-zinc-300 dark:border-zinc-700"></span>
     <p>
       <span>Built with </span>
-      <NuxtLink class="hover:underline underline-offset-4 hover:text-white/50" to="https://nuxt.com" target="_blank">
+      <NuxtLink class="cursor-pointer" to="https://nuxt.com" target="_blank">
         Nuxt
       </NuxtLink>
-      <span> &copy; Maher Abaza - 2025</span>
+      <span> &copy; Maher Abaza</span>
     </p>
   </section>
 </template>

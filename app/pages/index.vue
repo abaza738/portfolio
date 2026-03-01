@@ -1,24 +1,60 @@
 <template>
-  <main class="flex flex-1 flex-col items-center px-4">
-    <div class="overlay"></div>
-
-    <section class="relative responsive flex flex-1 flex-col gap-8 py-8">
+  <main class="responsive flex flex-1 flex-col gap-8">
+    <section class="relative flex flex-1 flex-col gap-8">
       <Transition name="slide-down" appear>
-        <div v-if="active" class="flex flex-col my-auto">
+        <div v-if="active" class="flex flex-col">
           <p>Hello, I am</p>
-          <h1 class="text-6xl md:text-8xl -mt-4 font-black text-amber-300">Maher Abaza.</h1>
-          <p class="-mt-2 text-xl font-bold">A <span class="text-amber-300">software engineer</span> based in Jordan.</p>
+          <h1 class="text-4xl font-black text-sky-500 dark:text-sky-400">
+            Maher Abaza.
+          </h1>
         </div>
       </Transition>
 
-      <NuxtLink
-        class="absolute bottom-0 right-0 text-white/10 hover:text-white/50"
-        to="https://circassian-genocide.org/"
-        external
-        target="_blank"
-      >
-        What does "Circassian" mean?
-      </NuxtLink>
+      <p>
+        A full-stack developer with about five years of experience, currently
+        working out of Amman, Jordan.
+      </p>
+
+      <p>
+        I'm Muslim of
+        <NuxtLink
+          href="https://en.wikipedia.org/wiki/Abazins"
+          target="_blank"
+          external
+        >
+          Abazin</NuxtLink
+        >
+        descent, and both of those parts of my identity matter deeply to me. The
+        <NuxtLink
+          href="https://en.wikipedia.org/wiki/Circassians"
+          target="_blank"
+          external
+        >
+          Circassian</NuxtLink
+        >
+        and Abazin people endured a
+        <NuxtLink
+          href="https://en.wikipedia.org/wiki/Circassian_genocide"
+          target="_blank"
+          external
+          >genocide</NuxtLink
+        >
+        that ended in 1864, one that most of the world has never heard of, and I
+        built
+        <a href="https://circassian-genocide.org">a memorial website</a> to help
+        change that.
+      </p>
+
+      <p>
+        I also stand firmly in support of the <b>Palestinian</b> people in their
+        fight to exist and be free of the Zionist criminal occupation.
+      </p>
+
+      <p>
+        On lighter days, you'll find me deep in a flight simulator pretending I
+        know what I'm doing at 35,000 feet, or obsessing over Formula 1,
+        something I've been doing for the better part of 20 years now.
+      </p>
     </section>
   </main>
 </template>
@@ -30,26 +66,14 @@ onMounted(() => nextTick(() => (active.value = true)))
 </script>
 
 <style scoped>
-main {
-  position: relative;
-  background-image: url('/img/adiga.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  mix-blend-mode: lighten;
+@reference '~/assets/css/main.css';
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: color-mix(in lab, var(--color-dark) 95%, transparent 5%);
-    width: 100%;
-    height: 100%;
-  }
+b {
+  @apply text-zinc-900 dark:text-zinc-100;
+}
 
-  & > :not(.overlay) {
-    z-index: 10;
-  }
+.card {
+  @apply cursor-pointer flex flex-col gap-2 p-4 rounded shadow-xs hover:shadow-sm text-inherit shadow-zinc-300 dark:shadow-zinc-800;
 }
 
 .slide-down-enter-active,

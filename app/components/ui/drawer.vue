@@ -6,7 +6,11 @@
         class="root fixed top-0 left-0 flex flex-col gap-4 p-4 h-screen w-screen backdrop-blur transition-all z-20"
         @click="close"
       >
-        <Icon class="ml-auto text-3xl cursor-pointer" name="solar:close-circle-broken" @click="close" />
+        <Icon
+          class="ml-auto text-3xl cursor-pointer"
+          name="solar:close-circle-broken"
+          @click="close"
+        />
         <slot></slot>
       </div>
     </Transition>

@@ -7,7 +7,11 @@
         </slot>
 
         <div class="close">
-          <Icon name="heroicons:x-mark-16-solid" class="cursor-pointer text-xl" @click="closeDialog" />
+          <Icon
+            name="heroicons:x-mark-16-solid"
+            class="cursor-pointer text-xl"
+            @click="closeDialog"
+          />
         </div>
       </div>
 
