@@ -1,5 +1,7 @@
 <template>
-  <div class="absolute bottom-4 right-4 flex flex-col-reverse gap-2 overflow-hidden z-50">
+  <div
+    class="absolute bottom-4 right-4 flex flex-col-reverse gap-2 overflow-hidden z-50"
+  >
     <TransitionGroup name="slide">
       <UiToast v-for="t in toasts" :key="t.id" v-bind:toast="t" />
     </TransitionGroup>

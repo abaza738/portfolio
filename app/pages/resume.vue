@@ -1,10 +1,10 @@
 <template>
-  <div class="responsive flex flex-1 flex-col gap-8 py-4">
+  <div class="responsive flex flex-1 flex-col gap-8">
     <p>
       <a
         href="https://drive.google.com/file/d/1TajqGaPcLJ6FSes9d5baevQDB6mRaQti/view"
         target="_blank"
-        class="inline-flex items-center gap-1 text-sm transition duration-300 text-decoration-none px-2 py-1 rounded-md bg-white/10 hover:bg-white/30 whitespace-nowrap"
+        class="inline-flex items-center gap-1 text-sm transition duration-300 text-decoration-none px-2 py-1 rounded-md bg-zinc-300 dark:bg-zinc-800 whitespace-nowrap"
       >
         <Icon name="i-heroicons-arrow-down-tray-16-solid" /> PDF
       </a>
@@ -12,64 +12,108 @@
 
     <h3 class="section-title">Skills</h3>
 
-    <div class="grid grid-cols-3 gap-4 text-white/75 md:max-w-[50%]">
+    <div class="grid grid-cols-3 gap-4">
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/python.svg" class="h-5" alt="python" title="Python" />
+        <Icon
+          name="nonicons:python-16"
+          class="text-xl"
+          alt="python"
+          title="Python"
+        />
         <span>Python</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/ts.svg" class="h-5" alt="ts" title="TypeScript" />
+        <Icon
+          name="nonicons:typescript-16"
+          class="text-xl"
+          alt="ts"
+          title="TypeScript"
+        />
         <span>TypeScript</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/go.svg" class="h-5" alt="ts" title="GoLang" />
+        <Icon name="nonicons:go-16" class="text-xl" alt="ts" title="GoLang" />
         <span>GoLang</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/docker.svg" class="h-5" alt="ts" title="Docker" />
+        <Icon
+          name="nonicons:docker-16"
+          class="text-xl"
+          alt="ts"
+          title="Docker"
+        />
         <span>Docker</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/django.svg" class="h-5" alt="django" title="Django" />
+        <Icon
+          name="simple-icons:django"
+          src="/img/django.svg"
+          class="text-xl"
+          alt="django"
+          title="Django"
+        />
         <span>Django</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/node.svg" class="h-5" alt="nodejs" title="NodeJS" />
+        <Icon
+          name="nonicons:node-16"
+          class="text-xl"
+          alt="nodejs"
+          title="NodeJS"
+        />
         <span>NodeJS</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/nestjs.svg" class="h-5" alt="nestjs" title="NestJS" />
+        <Icon
+          name="simple-icons:nestjs"
+          src="/img/nestjs.svg"
+          class="text-xl"
+          alt="nestjs"
+          title="NestJS"
+        />
         <span>NestJS</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/tauri.svg" class="h-5" alt="tauri" title="Tauri" />
+        <Icon
+          name="simple-icons:tauri"
+          src="/img/tauri.svg"
+          class="text-xl"
+          alt="tauri"
+          title="Tauri"
+        />
         <span>Tauri</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/vue.svg" class="h-5" alt="vue" title="Vue 3" />
+        <Icon name="nonicons:vue-16" class="text-xl" alt="vue" title="Vue 3" />
         <span>Vue 3</span>
       </div>
       <div class="inline-flex items-center gap-2">
-        <NuxtImg src="/img/nuxt.svg" class="h-5" alt="nuxt" title="Nuxt" />
+        <Icon
+          name="lineicons:nuxt"
+          src="/img/nuxt.svg"
+          class="text-xl"
+          alt="nuxt"
+          title="Nuxt"
+        />
         <span>Nuxt</span>
       </div>
     </div>
 
     <h3 class="section-title">Experience</h3>
 
-    <div class="flex flex-col gap-4 md:max-w-[50%]">
+    <div class="flex flex-col gap-4">
       <Milestone v-for="e in experience" :key="e.entity" :milestone="e" />
     </div>
 
     <h3 class="section-title">Education</h3>
-    
-    <div class="flex flex-col gap-4 md:max-w-[50%]">
+
+    <div class="flex flex-col gap-4">
       <Milestone v-for="e in education" :key="e.entity" :milestone="e" />
     </div>
 
     <h3 class="section-title">Volunteer</h3>
 
-    <div class="flex flex-col gap-4 md:max-w-[50%]">
+    <div class="flex flex-col gap-4">
       <Milestone v-for="v in volunteer" :key="v.entity" :milestone="v" />
     </div>
   </div>
@@ -166,11 +210,10 @@ const volunteer: ResumeMilstone[] = [
 <style scoped>
 h3.section-title {
   font-size: var(--text-lg);
-  color: rgba(255, 255, 255, 75%);
   text-transform: uppercase;
   text-decoration: underline;
   text-underline-offset: 10px;
-  text-decoration-color: var(--color-amber-900);
+  text-decoration-color: var(--color-sky-900);
   padding-bottom: calc(var(--spacing) * 2);
   letter-spacing: 8px;
 }

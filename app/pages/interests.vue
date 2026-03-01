@@ -1,28 +1,37 @@
 <template>
-  <div class="responsive flex flex-1 flex-col gap-4 py-4 select-none">
-    
+  <div class="responsive flex flex-1 flex-col gap-4 select-none">
     <section class="ferrari p-8 md:p-12">
       <div class="overlay"></div>
 
       <div class="flex flex-col gap-4 z-10">
         <h3 class="font-bold text-5xl md:text-8xl">Formula 1</h3>
-        <p class="w-full md:max-w-[40%]">
-          Watching <span class="underline underline-offset-4">Formula 1</span> since 2006, I grew an early obsession with the prancing horse team.
-          Till this day, not a single race weekend goes by without wearing the <span class="underline underline-offset-4">Ferrari</span> shirt and forcing human beings in my immediate vicinity to watch the live action!
+        <p class="w-full md:max-w-[75%]">
+          Watching
+          <span class="underline underline-offset-4">Formula 1</span> since
+          2006, I grew an early obsession with the prancing horse team. Till
+          this day, not a single race weekend goes by without wearing the
+          <span class="underline underline-offset-4">Ferrari</span> shirt and
+          forcing human beings in my immediate vicinity to watch the live
+          action!
         </p>
       </div>
     </section>
 
-    
     <section class="aviation p-8 md:p-12 text-end">
       <div class="overlay"></div>
-      
+
       <div class="flex flex-col gap-4 z-10">
         <h3 class="font-bold text-5xl md:text-8xl">Aviation</h3>
-        <p class="w-full md:max-w-[40%] ms-auto">
-          My passion in aviation started at a young age, watching <span class="underline underline-offset-4">Air Crash Investigations</span>.
-          It still is very interesting to me learning about aircraft structure, design, how they fly, and the regulations that surround all of it.
-          Unfortunately, I could not become a pilot because I am <span class="underline underline-offset-4">colorblind</span>. So I took this passion to <span class="underline underline-offset-4">Flight Simulation</span>.
+        <p class="w-full md:max-w-[75%] ms-auto">
+          My passion in aviation started at a young age, watching
+          <span class="underline underline-offset-4"
+            >Air Crash Investigations</span
+          >. It still is very interesting to me learning about aircraft
+          structure, design, how they fly, and the regulations that surround all
+          of it. Unfortunately, I could not become a pilot because I am
+          <span class="underline underline-offset-4">colorblind</span>. So I
+          took this passion to
+          <span class="underline underline-offset-4">Flight Simulation</span>.
         </p>
       </div>
     </section>
@@ -50,8 +59,9 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 
+  color: var(--color-zinc-200);
   filter: saturate(25%);
-  
+
   &:hover {
     filter: saturate(100%) sepia(50%);
 
@@ -93,7 +103,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(3px);
   }
 }

@@ -41,19 +41,19 @@ const icon = computed(() => {
 
   &[data-type='error'] {
     background-color: hsla(0, 85%, 35%, 0.4);
-    border: 1px solid  hsla(0, 85%, 55%, 0.2);
+    border: 1px solid hsla(0, 85%, 55%, 0.2);
   }
   &[data-type='info'] {
     background-color: hsla(200, 85%, 30%, 0.4);
-    border: 1px solid  hsla(200, 85%, 50%, 0.2);
+    border: 1px solid hsla(200, 85%, 50%, 0.2);
   }
   &[data-type='success'] {
     background-color: hsla(145, 70%, 30%, 0.4);
-    border: 1px solid  hsla(145, 70%, 50%, 0.2);
+    border: 1px solid hsla(145, 70%, 50%, 0.2);
   }
   &[data-type='warn'] {
     background-color: hsla(40, 90%, 30%, 0.4);
-    border: 1px solid  hsla(40, 90%, 50%, 0.2);
+    border: 1px solid hsla(40, 90%, 50%, 0.2);
   }
 }
 </style>

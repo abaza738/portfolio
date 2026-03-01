@@ -1,7 +1,15 @@
 <template>
   <div class="flex flex-1 flex-col">
-    <Navbar />
-    <NuxtPage />
+    <UiBanner />
+    <div class="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_min(600px,100%)_1fr]">
+      <div class="hidden lg:flex flex-col items-end">
+        <Sidebar />
+      </div>
+      <div class="flex flex-col px-8 lg:px-0">
+        <NuxtPage />
+      </div>
+      <div class="hidden lg:block"></div>
+    </div>
     <Footer />
     <UiNotifications />
   </div>
@@ -29,9 +37,6 @@ useSeoMeta({
 useHead({
   htmlAttrs: {
     lang: 'en'
-  },
-  bodyAttrs: {
-    class: 'dark'
   },
   link: [{ rel: 'icon', href: '/img/abaza738-512.png' }],
   title: 'Maher Abaza'
