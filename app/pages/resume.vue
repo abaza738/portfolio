@@ -131,6 +131,17 @@
 </template>
 
 <script setup lang="ts">
+defineOgImage('Default', {
+  title: 'Resumé',
+  description: 'Work, skills, and volunteer experience'
+})
+
+useSeoMeta({
+  ogTitle: 'Resumé',
+  ogDescription: 'Work, skills, and volunteer experience',
+  description: 'Work, skills, and volunteer experience'
+})
+
 useHead({
   titleTemplate: (title?: string) => `${title} | Resumé`
 })

@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
+    'nuxt-og-image',
     '~/modules/build'
   ],
 
@@ -45,6 +46,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     githubToken: import.meta.env.NUXT_GITHUB_TOKEN
+  },
+
+  site: {
+    title: 'Maher Abaza',
+    description: 'My personal website',
+    url: 'https://abaza.dev'
   },
 
   vite: {
