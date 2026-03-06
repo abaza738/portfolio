@@ -19,6 +19,7 @@
         class="flex flex-col items-end text-grey-400 dark:text-grey-600 gap-2"
       >
         <NuxtLink
+          v-if="appConfig.buildInfo.version !== 'unknown'"
           :to="`https://github.com/abaza738/portfolio/releases/tag/${appConfig.buildInfo.version}`"
           target="_blank"
           external
@@ -28,6 +29,7 @@
 
         <p>
           <NuxtLink
+            v-if="appConfig.buildInfo.commit !== 'unknown'"
             :to="`https://github.com/abaza738/portfolio/commit/${appConfig.buildInfo.commit}`"
             :title="appConfig.buildInfo.commitMessage"
             target="_blank"
