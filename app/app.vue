@@ -30,21 +30,21 @@
 </template>
 
 <script setup lang="ts">
+defineOgImage('Default', {
+  title: 'Maher Abaza',
+  description: 'My personal website'
+})
+
 useSeoMeta({
-  description: 'My portfolio',
+  description: 'My personal website',
   ogUrl: 'https://abaza.dev',
-  twitterImage: '/img/og-image.png',
   charset: 'utf-8',
   author: 'Maher Abaza, maher.abaza@proton.me',
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1.0',
   ogTitle: 'Maher Abaza',
-  ogDescription: 'My portfolio',
+  ogDescription: 'My personal website',
   ogType: 'profile',
-  ogImage: '/img/og-image.png',
-  ogImageType: 'image/png',
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
   themeColor: '#040606'
 })
 

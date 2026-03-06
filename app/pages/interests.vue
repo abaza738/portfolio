@@ -39,6 +39,17 @@
 </template>
 
 <script setup lang="ts">
+defineOgImage('Default', {
+  title: 'Interests',
+  description: 'My life away from code'
+})
+
+useSeoMeta({
+  ogTitle: 'Interests',
+  ogDescription: 'My life away from code',
+  description: 'My life away from code'
+})
+
 useHead({
   titleTemplate: (title) => `${title} | Interests`
 })
