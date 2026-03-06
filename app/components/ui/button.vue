@@ -43,13 +43,13 @@ const sizeClasses = computed(() => {
 const variantClasses = computed(() => {
   switch (variant) {
     case 'primary':
-      return 'bg-blue-700 hover:bg-blue-800 text-white'
+      return 'bg-primary hover:bg-primary/80 text-white'
     case 'secondary':
-      return 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+      return 'bg-grey-200 hover:bg-grey-300 text-grey-800'
     case 'outline':
-      return 'bg-transparent border border-grey-200 hover:border-gray-300'
+      return 'bg-transparent border border-grey-600 dark:border-grey-400 hover:bg-grey-200 dark:hover:bg-grey-800'
     default:
-      return 'bg-blue-700 hover:bg-blue-800 text-white'
+      return 'bg-primary hover:bg-primary/80 text-white'
   }
 })
 </script>

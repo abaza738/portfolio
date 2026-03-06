@@ -1,18 +1,32 @@
 <template>
-  <div class="flex flex-1 flex-col">
-    <UiBanner />
-    <div class="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_min(600px,100%)_1fr]">
-      <div class="hidden lg:flex flex-col items-end">
+  <main class="flex flex-1 flex-col p-8">
+    <div
+      class="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_min(600px,100%)_1fr] gap-8"
+    >
+      <div
+        class="hidden lg:flex flex-col items-end border-e border-grey-300 dark:border-grey-800"
+      >
         <Sidebar />
       </div>
-      <div class="flex flex-col px-8 lg:px-0">
+      <div class="flex-1 flex flex-col px-8 lg:px-0">
         <NuxtPage />
       </div>
-      <div class="hidden lg:block"></div>
+      <div class="hidden lg:flex items-start justify-end">
+        <ClientOnly>
+          <template #fallback>
+            <div
+              class="flex items-center justify-center p-1 text-xl rounded-full bg-grey-300 hover:bg-grey-400 dark:bg-grey-800 dark:hover:bg-grey-700 z-10"
+            >
+              <Icon name="solar:refresh-linear" class="animate-spin" />
+            </div>
+          </template>
+
+          <UiColorMode />
+        </ClientOnly>
+      </div>
     </div>
-    <Footer />
     <UiNotifications />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

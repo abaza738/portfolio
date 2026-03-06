@@ -3,12 +3,12 @@
     <Transition name="slide-in">
       <div
         v-if="active"
-        class="root fixed top-0 left-0 flex flex-col gap-4 p-4 h-screen w-screen backdrop-blur transition-all z-20"
+        class="root fixed top-(--ui-banner-height) left-0 flex flex-col gap-4 p-4 h-screen w-screen backdrop-blur-lg transition-all z-20"
         @click="close"
       >
         <Icon
           class="ml-auto text-3xl cursor-pointer"
-          name="solar:close-circle-broken"
+          name="solar:close-circle-linear"
           @click="close"
         />
         <slot></slot>

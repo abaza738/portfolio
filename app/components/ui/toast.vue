@@ -30,7 +30,10 @@ const icon = computed(() => {
 </script>
 
 <style scoped>
+@reference '~/assets/css/main.css';
+
 .toast {
+  @apply bg-grey-300 dark:bg-grey-600;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,20 +43,16 @@ const icon = computed(() => {
   overflow: hidden;
 
   &[data-type='error'] {
-    background-color: hsla(0, 85%, 35%, 0.4);
-    border: 1px solid hsla(0, 85%, 55%, 0.2);
+    border: 1px solid var(--color-red-600);
   }
   &[data-type='info'] {
-    background-color: hsla(200, 85%, 30%, 0.4);
-    border: 1px solid hsla(200, 85%, 50%, 0.2);
+    border: 1px solid var(--color-cyan-600);
   }
   &[data-type='success'] {
-    background-color: hsla(145, 70%, 30%, 0.4);
-    border: 1px solid hsla(145, 70%, 50%, 0.2);
+    border: 1px solid var(--color-green-600);
   }
   &[data-type='warn'] {
-    background-color: hsla(40, 90%, 30%, 0.4);
-    border: 1px solid hsla(40, 90%, 50%, 0.2);
+    border: 1px solid var(--color-yellow-600);
   }
 }
 </style>

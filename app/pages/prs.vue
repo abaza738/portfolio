@@ -1,7 +1,7 @@
 <template>
-  <div class="responsive flex flex-1 flex-col gap-8">
+  <div class="flex flex-1 flex-col gap-8">
     <section>
-      <p class="text-sm text-sky-500 ms-14 font-mono">recent</p>
+      <p class="text-sm text-primary ms-14 font-mono">recent</p>
       <h2 class="text-4xl -mt-3">
         <Icon name="solar:code-2-bold" /> Contributions
       </h2>
@@ -19,7 +19,10 @@
         v-else-if="status === 'error'"
         class="flex-1 flex flex-col items-center justify-center"
       >
-        <Icon class="text-5xl text-sky-500" name="solar:danger-triangle-bold" />
+        <Icon
+          class="text-5xl text-amber-500"
+          name="solar:danger-triangle-bold"
+        />
         <p>Something went wrong :(</p>
       </div>
 
@@ -43,18 +46,14 @@
 
           <code>
             <NuxtLink
-              class="underline underline-offset-4 hover:text-sky-300"
+              class="underline underline-offset-4"
               target="_blank"
               :to="'https://github.com/' + pr.repo"
             >
               {{ pr.repo }}
             </NuxtLink>
 
-            <NuxtLink
-              class="font-medium text-sm hover:underline underline-offset-4"
-              target="_blank"
-              :to="pr.url"
-            >
+            <NuxtLink class="font-medium text-sm" target="_blank" :to="pr.url">
               <span>{{ pr.title }}</span>
             </NuxtLink>
           </code>

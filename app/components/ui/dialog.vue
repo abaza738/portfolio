@@ -1,6 +1,10 @@
 <template>
   <Transition appear>
-    <dialog ref="dialogRef" :class="$attrs.class">
+    <dialog
+      ref="dialogRef"
+      :class="$attrs.class"
+      class="bg-grey-300 dark:bg-grey-950 text-grey-900 dark:text-grey-200"
+    >
       <div class="title">
         <slot name="header">
           <h2 v-if="title">{{ title }}</h2>
@@ -67,14 +71,16 @@ dialog {
   max-height: 90%;
   max-width: 90%;
   margin: auto;
-  background: color-mix(in srgb, var(--color-dark) 40%, transparent 60%);
-  backdrop-filter: blur(6px);
-  color: white;
   border-radius: var(--radius-lg);
   overflow: hidden;
 
   &::backdrop {
-    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    background-color: color-mix(
+      in srgb,
+      var(--color-grey-900) 50%,
+      transparent
+    );
   }
 
   .title {
