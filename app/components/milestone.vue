@@ -1,25 +1,34 @@
 <template>
   <section
-    class="space-y-2 pb-4 border-b border-dashed border-zinc-400 last:border-transparent"
+    class="space-y-4 pb-8 border-b border-dashed border-grey-400 last:border-transparent"
   >
-    <div class="flex items-center justify-between">
-      <NuxtLink
-        :to="milestone.link"
-        class="hover:drop-shadow-lg hover:drop-shadow-sky-300/30"
-        target="_blank"
-      >
+    <div class="flex items-center gap-4">
+      <NuxtLink class="entity" :to="milestone.link" target="_blank">
         {{ milestone.entity }}
       </NuxtLink>
 
-      <div class="flex flex-col items-end">
-        <h5 class="text-lg text-sky-300 dark:text-sky-600">
+      <div class="flex flex-col">
+        <h5 class="text-lg">
           {{ milestone.title }}
         </h5>
-        <div class="text-xs uppercase">{{ milestone.timePeriod }}</div>
+        <div class="text-sm uppercase">{{ milestone.timePeriod }}</div>
       </div>
     </div>
 
     <div v-html="milestone.description"></div>
+
+    <p
+      v-if="milestone.skills?.length"
+      class="flex flex-wrap justify-start gap-2"
+    >
+      <div
+        v-for="skill in milestone.skills"
+        :key="`skill-${milestone.entity}-${skill}`"
+        class="flex items-center py-1 px-4 rounded-md border border-grey-400 bg-grey-950/10 dark:bg-grey-100/5 text-sm"
+      >
+        {{ skill }}
+      </div>
+    </p>
   </section>
 </template>
 
@@ -30,15 +39,16 @@ defineProps<{
 </script>
 
 <style scoped>
-section a {
+@reference '~/assets/css/main.css';
+
+.entity {
+  @apply text-3xl text-grey-200 dark:text-grey-800 bg-primary dark:bg-grey-200 rounded-md px-4 py-1;
   width: fit-content;
   font-family: 'Config Condensed Bold';
-  font-size: var(--text-5xl);
-  font-weight: 800;
-  position: relative;
 }
 
 :deep(p) {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-inline-start: 2rem;
 }
 </style>

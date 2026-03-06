@@ -2,9 +2,7 @@
   <nav
     class="sticky top-0 flex items-center justify-between bg-dark/50 border-b border-white/5 backdrop-blur z-20 select-none"
   >
-    <div
-      class="relative responsive text-sm py-4 uppercase flex items-center gap-8"
-    >
+    <div class="relative text-sm py-4 uppercase flex items-center gap-8">
       <NuxtLink
         class="hidden sm:flex text-white/30"
         active-class="!text-white"

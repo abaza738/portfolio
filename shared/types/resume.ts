@@ -4,4 +4,5 @@ export type ResumeMilstone = {
   timePeriod: string
   description: string
   link: string
+  skills?: string[]
 }

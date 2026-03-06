@@ -33,7 +33,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '~/modules/build'
   ],
 
   colorMode: {

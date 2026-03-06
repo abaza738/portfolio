@@ -1,5 +1,5 @@
 <template>
-  <div class="responsive flex flex-1 flex-col gap-4 select-none">
+  <div class="flex flex-1 flex-col gap-4 select-none">
     <section class="ferrari p-8 md:p-12">
       <div class="overlay"></div>
 
@@ -46,7 +46,7 @@ useHead({
 
 <style scoped>
 section {
-  height: 450px;
+  height: calc(50vh - var(--spacing) * 10);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 
-  color: var(--color-zinc-200);
+  color: var(--color-grey-200);
   filter: saturate(25%);
 
   &:hover {
