@@ -116,21 +116,15 @@
           <span class="underline underline-offset-4">humanitarian aid</span>
           efforts, or advocating for peaceful solutions.
         </p>
-        <p>
-          Boycott, Divestment, Sanctions.<br />Join the
-          <NuxtLink
-            class="text-blue-200 hover:text-white underline underline-offset-4"
-            to="https://bdsmovement.net"
-            target="_blank"
-            external
-            >BDS Movement</NuxtLink
-          >
-          now!
-        </p>
+        <hr />
+        <p>Boycott, Divestment, Sanctions!</p>
       </div>
 
       <template #footer>
-        <div class="flex items-center justify-end p-4">
+        <div class="flex items-center justify-end gap-4 p-4">
+          <NuxtLink to="https://bdsmovement.net" target="_blank" external>
+            <UiButton variant="primary" label="Join the BDS Movement" />
+          </NuxtLink>
           <UiButton variant="outline" @click="dialogRef?.close">Close</UiButton>
         </div>
       </template>
