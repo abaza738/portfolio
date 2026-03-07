@@ -5,7 +5,7 @@
   >
     <img
       src="/img/ab-no-bg.png"
-      class="absolute -bottom-38 -right-1/4 -rotate-30 opacity-5 max-h-full object-contain"
+      class="absolute top-1/2 -right-60 -translate-y-1/2 opacity-5 max-h-full object-contain"
     />
     <div class="flex-1 flex flex-col justify-center px-12 gap-10">
       <h1

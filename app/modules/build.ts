@@ -28,7 +28,6 @@ export default defineNuxtModule({
     let latestTag: string = 'unknown'
     try {
       const tags = await git.tags()
-      console.log('Git tags:', tags)
       latestTag = tags.latest || 'unknown'
     } catch (error) {
       console.error('Error fetching Git tags:', error)
