@@ -40,6 +40,14 @@
       change that.
     </p>
 
+    <LinkPreview
+      v-if="data"
+      url="https://circassian-genocide.org"
+      :title="data.title"
+      :description="data.description"
+      :image="data.image"
+    />
+
     <p>
       I also stand firmly in support of the
       <b class="text-grey-900 dark:text-grey-100">Palestinian</b> people in
@@ -53,6 +61,12 @@
     </p>
   </div>
 </template>
+
+<script setup lang="ts">
+const { data } = await useFetch('/api/link-preview', {
+  query: { url: 'https://circassian-genocide.org' }
+})
+</script>
 
 <style scoped>
 p {
