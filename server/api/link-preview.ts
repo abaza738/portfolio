@@ -12,11 +12,7 @@ export default defineEventHandler(async (event) => {
       'i'
     )
     const match = html.match(regex)
-    return (
-      match?.[1]?.replace(/\?.*$/gi, '') ??
-      match?.[2]?.replace(/\?.*$/gi, '') ??
-      ''
-    )
+    return match?.[1] ?? match?.[2] ?? ''
   }
 
   return {
