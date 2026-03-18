@@ -6,9 +6,9 @@
   >
     <img
       v-if="image"
-      :src="image"
+      :src="`/api/image-proxy?url=${encodeURIComponent(image)}`"
       :alt="title"
-      class="w-full aspect-video object-cover"
+      class="w-full aspect-auto object-cover"
     />
     <div class="flex flex-col gap-1 p-4">
       <span class="text-xs text-primary uppercase">{{ domain }}</span>
