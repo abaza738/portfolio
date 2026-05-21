@@ -148,28 +148,23 @@ useHead({
 
 const experience: ResumeMilstone[] = [
   {
+    title: 'Senior Frontend Developer',
+    entity: 'Sanad - MODEE',
+    timePeriod: 'May 2026 - Present',
+    description: `<p>Frontend developer for the government services application <i>“Sanad”</i> under the <b>Ministry of Digital Economy and Entrepreneurship</b>.
+      Implementing integrations for all government e-services on a web portal built with <b>Angular</b> using an <b>Nx monorepo</b> architecture.</p>`,
+    link: 'https://www.sanad.gov.jo/',
+    skills: ['Nx', 'Angular']
+  },
+  {
     title: 'Software Engineer',
     entity: 'Ard Group',
-    timePeriod: 'Oct. 2023 - Present',
-    description: `<p>
-      <strong>Qarar</strong> is a disaster management platform for government clients, built with
-      <strong>Nuxt 4</strong> on the frontend and <strong>NestJS</strong> with
-      <strong>PostgreSQL</strong> or <strong>MS SQL Server</strong> on the backend.
-    </p>
-
-    <p>
-      I was part of the team that built it, and my contributions spanned both feature work and
-      architecture, including designing the weather forecast API layer <strong>database-first</strong>,
-      using optimized <strong>views</strong> and <strong>caching</strong> to keep data retrieval
-      efficient. I also worked on a <strong>survey builder</strong> supporting multiple input types
-      with review workflows, and a <strong>TAF visualizer</strong> for aviation weather forecasts.
-    </p>
-
-    <p>
-      Alongside the development work, I managed the <strong>Git</strong> workflow, handled
-      <strong>deployments</strong>, and ran <strong>code reviews</strong> for a team of three to
-      six developers.
-    </p>`,
+    timePeriod: 'Oct. 2023 - Apr. 2026',
+    description: `<ul>
+      <li>Worked on a disaster management platform for government entities (MENA region) using <b>NestJS</b> and <b>Nuxt</b>.</li>
+      <li>Implemented front-end-heavy features: custom <b>form builder</b>, <b>reports builder</b>, <b>GIS information</b> presentation using map libraries such as <b>Mapbox</b> and <b>OpenLayers</b>.</li>
+      <li>Conducted <b>code review</b> sessions and managed the <b>Git workflow</b> for a team of 3-6 devs.</li>
+      </ul>`,
     link: 'https://ard.co',
     skills: ['Nuxt', 'NestJS', 'Code Reviews', 'GitLab CI', 'Docker']
   },
@@ -177,12 +172,11 @@ const experience: ResumeMilstone[] = [
     title: 'Software Engineer',
     entity: 'MakanE',
     timePeriod: 'Sep. 2022 - Oct. 2023',
-    description: `<p>
-      Served as a core team member, building and enhancing features for a
-      regional e-commerce platform, significantly improving <b>Django</b> ORM queries and implementing
-      frontend features using <b>Vue 2</b> for both merchant dashboard side and shopper storefront.
-      </p>
-    `,
+    description: `<ul>
+      <li>Core team member for local e-commerce platform “MakanE”.</li>
+      <li><b>Refactored</b> parts of the system for <b>performance</b> enhancements on <b>Django ORM</b>: queries reduced from 10s of thousands to under 10 optimised queries.</li>
+      <li>Implemented <b>rate-limiting</b> algorithms for resource-intensive APIs to protect from DOS attacks.</li>
+      </ul>`,
     link: 'https://makane.com',
     skills: ['Python', 'Django', 'Vue', 'Postgresql', 'Jira']
   },
@@ -190,11 +184,10 @@ const experience: ResumeMilstone[] = [
     title: 'Full-Stack Web Developer',
     entity: 'RealSoft',
     timePeriod: 'Mar. 2021 - Sep. 2022',
-    description: `<p>
-      Contributed to the development of large-scale government platforms,
-      including a complex survey and data collection system (Al-Khwarizmi) and
-      new features for the Social Security Corporation using <b>Angular</b> and both <b>NodeJS</b> & <b>NestJS</b> for backend services.
-      </p>`,
+    description: `<ul>
+      <li>Assisted in the design and implementation of systems for the company's projects: <i>Al-Khwarizmi</i>, and the <i>Jordanian Social Security Corporation</i> with <b>Angular</b> and <b>NodeJS/NestJS</b>.</li>
+      <li>Set standards for <b>Git workflow</b> and <b>code review</b> within peers.</li>
+      </ul>`,
     link: 'https://realsoft-me.com',
     skills: ['Angular', 'NodeJS', 'NestJS', 'Git']
   }
@@ -205,7 +198,8 @@ const education: ResumeMilstone[] = [
     title: 'BSc. Software Engineering',
     entity: 'PSUT',
     timePeriod: '2016 - 2021',
-    description: '<p>Grade: 75%</p>',
+    description: `<p>Grade: 75%</p>
+      <p>Participated in astronomy club Antares, Google Developer Student Club, and assisted in organizing TEDx PSUT (2018).</p>`,
     link: 'https://psut.edu.jo'
   }
 ]
@@ -215,8 +209,11 @@ const volunteer: ResumeMilstone[] = [
     title: 'Software Engineer',
     entity: 'POSCON',
     timePeriod: '2018 - Present',
-    description:
-      '<p>Assisting in the development of the POSCON HQ System (website) and POSCON Launcher client (desktop) using <b>Tauri</b> + <b>Nuxt</b>.</p>',
+    description: `<ul>
+      <li>Volunteer web developer for <b>POSCON</b>, the next-generation flight simulation network. Contributed to the development of <i>POSCON HQ</i>
+      - the main dashboard for POSCON users and administrators; using <b>React</b>.</li>
+      <li>Created the <i>POSCON Launcher</i> desktop application using <b>Tauri</b> and <b>Nuxt</b>.</li>
+      </ul>`,
     link: 'https://poscon.net',
     skills: ['React', 'Nuxt', 'Tauri']
   }
