@@ -51,4 +51,9 @@ defineProps<{
   margin-top: 1.5rem;
   margin-inline-start: 2rem;
 }
+
+:deep(ul) {
+  list-style: square;
+  padding-inline-start: 2rem;
+}
 </style>
