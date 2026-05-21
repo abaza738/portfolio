@@ -8,20 +8,24 @@
       >
         <Sidebar />
       </div>
-
       <div class="flex-1 flex flex-col px-8 lg:px-0">
         <NuxtPage />
       </div>
+      <div class="hidden lg:flex items-start justify-end">
+        <ClientOnly>
+          <template #fallback>
+            <div
+              class="flex items-center justify-center p-1 text-xl rounded-full bg-grey-300 hover:bg-grey-400 dark:bg-grey-800 dark:hover:bg-grey-700 z-10"
+            >
+              <Icon name="solar:refresh-linear" class="animate-spin" />
+            </div>
+          </template>
 
-      <div class="hidden lg:flex items-start"></div>
+          <UiColorMode />
+        </ClientOnly>
+      </div>
     </div>
-
     <UiNotifications />
-
-    <ClientOnly>
-      <UiColorMode class="fixed top-8 right-8 z-10" />
-      <Live class="fixed bottom-8 right-8 z-10" />
-    </ClientOnly>
   </main>
 </template>
 

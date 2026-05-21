@@ -13,9 +13,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-08-13',
 
   nitro: {
-    experimental: {
-      websocket: true
-    },
     preset: 'cloudflare_module',
     cloudflare: {
       deployConfig: true,
